@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Provider from "./Timer/components/Provider";
+import Timer from "./Timer/components/Timer";
+import createStore from "./Timer/store/store";
+import {reducer} from "./Timer/store/reducer";
+
+
+// Slomux — упрощённая, сломанная реализация Flux.
+// Перед вами небольшое приложение, написанное на React + Slomux.
+// Это нерабочий секундомер с настройкой интервала обновления.
+
+// Исправьте ошибки и потенциально проблемный код, почините приложение и прокомментируйте своё решение.
+
+// При нажатии на "старт" должен запускаться секундомер и через заданный интервал времени увеличивать свое значение на значение интервала
+// При нажатии на "стоп" секундомер должен останавливаться и сбрасывать свое значение
+
+
+// init
+let store = createStore(reducer)
+window.st = store
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    <Provider store={store}>
+        <Timer />
+    </Provider>,
+    document.getElementById('root')
+)
