@@ -51,6 +51,7 @@ class TimerComponent extends React.Component {
                         <div>
                             Кнопка старт если счетчик включен принимает состояние disabled
                         </div>
+                        <a href="https://github.com/dembit/counter">Ссылка на код (репозиторий)</a>
                     </div>
                 </div>
 
