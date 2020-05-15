@@ -1,3 +1,5 @@
+You can open this project by reference https://dembit.github.io/counter/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
